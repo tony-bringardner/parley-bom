@@ -52,6 +52,9 @@
     <parley-ftp.version>1.0.0-SNAPSHOT</parley-ftp.version>
     <parley-dns.version>1.0.0-SNAPSHOT</parley-dns.version>
     <parley-mail.version>1.0.0-SNAPSHOT</parley-mail.version>
+    <parley-smtp.version>1.0.0-SNAPSHOT</parley-smtp.version>
+    <parley-imap.version>1.0.0-SNAPSHOT</parley-imap.version>
+    <parley-pop3.version>1.0.0-SNAPSHOT</parley-pop3.version>
     <parley-files.version>1.0.0-SNAPSHOT</parley-files.version>
     <parley-files-ftp.version>1.0.0-SNAPSHOT</parley-files-ftp.version>
     <parley-files-sftp.version>1.0.0-SNAPSHOT</parley-files-sftp.version>
@@ -89,6 +92,21 @@
         <groupId>us.bringardner.parley</groupId>
         <artifactId>parley-mail</artifactId>
         <version>${parley-mail.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-smtp</artifactId>
+        <version>${parley-smtp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-imap</artifactId>
+        <version>${parley-imap.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-pop3</artifactId>
+        <version>${parley-pop3.version}</version>
       </dependency>
       <dependency>
         <groupId>us.bringardner.parley</groupId>
