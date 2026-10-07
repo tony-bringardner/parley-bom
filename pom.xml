@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Parley bill of materials.
+
+  Users import this once and then add Parley modules without versions:
+
+    <dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>us.bringardner.parley</groupId>
+          <artifactId>parley-bom</artifactId>
+          <version>1.0.0</version>
+          <type>pom</type>
+          <scope>import</scope>
+        </dependency>
+      </dependencies>
+    </dependencyManagement>
+
+    <dependency>
+      <groupId>us.bringardner.parley</groupId>
+      <artifactId>parley-dns</artifactId>
+    </dependency>
+
+  Each BOM release is a tested-together set. Release a new BOM whenever any module
+  version below changes. Lists ONLY Parley's own artifacts - never third-party ones.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>us.bringardner.parley</groupId>
+    <artifactId>parley-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- Sibling folder locally; resolved from Central once the parent is published -->
+    <relativePath>../parley-parent/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>parley-bom</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>${project.groupId}:${project.artifactId}</name>
+  <description>Parley bill of materials: compatible versions of every Parley module.</description>
+
+  <properties>
+    <!-- One line per module. Keep these in step with each module's released version. -->
+    <parley-core.version>1.0.0-SNAPSHOT</parley-core.version>
+    <parley-io.version>1.0.0-SNAPSHOT</parley-io.version>
+    <parley-net.version>1.0.0-SNAPSHOT</parley-net.version>
+    <parley-ftp.version>1.0.0-SNAPSHOT</parley-ftp.version>
+    <parley-dns.version>1.0.0-SNAPSHOT</parley-dns.version>
+    <parley-mail.version>1.0.0-SNAPSHOT</parley-mail.version>
+    <!-- 2.x: successor to BjlFileSystem 1.0.0 under new coordinates -->
+    <parley-vfs.version>2.0.0-SNAPSHOT</parley-vfs.version>
+    <parley-vfs-ftp.version>2.0.0-SNAPSHOT</parley-vfs-ftp.version>
+    <parley-vfs-sftp.version>2.0.0-SNAPSHOT</parley-vfs-sftp.version>
+    <parley-vfs-jdbc.version>2.0.0-SNAPSHOT</parley-vfs-jdbc.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-core</artifactId>
+        <version>${parley-core.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-io</artifactId>
+        <version>${parley-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-net</artifactId>
+        <version>${parley-net.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-ftp</artifactId>
+        <version>${parley-ftp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-dns</artifactId>
+        <version>${parley-dns.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-mail</artifactId>
+        <version>${parley-mail.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-vfs</artifactId>
+        <version>${parley-vfs.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-vfs-ftp</artifactId>
+        <version>${parley-vfs-ftp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-vfs-sftp</artifactId>
+        <version>${parley-vfs-sftp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-vfs-jdbc</artifactId>
+        <version>${parley-vfs-jdbc.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
