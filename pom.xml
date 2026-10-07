@@ -51,6 +51,7 @@
     <parley-net.version>1.0.0-SNAPSHOT</parley-net.version>
     <parley-ftp.version>1.0.0-SNAPSHOT</parley-ftp.version>
     <parley-dns.version>1.0.0-SNAPSHOT</parley-dns.version>
+    <parley-ssh.version>1.0.0-SNAPSHOT</parley-ssh.version>
     <parley-mail.version>1.0.0-SNAPSHOT</parley-mail.version>
     <parley-smtp.version>1.0.0-SNAPSHOT</parley-smtp.version>
     <parley-imap.version>1.0.0-SNAPSHOT</parley-imap.version>
@@ -87,6 +88,11 @@
         <groupId>us.bringardner.parley</groupId>
         <artifactId>parley-dns</artifactId>
         <version>${parley-dns.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-ssh</artifactId>
+        <version>${parley-ssh.version}</version>
       </dependency>
       <dependency>
         <groupId>us.bringardner.parley</groupId>
