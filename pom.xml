@@ -60,6 +60,7 @@
     <parley-files-ftp.version>1.0.0-SNAPSHOT</parley-files-ftp.version>
     <parley-files-sftp.version>1.0.0-SNAPSHOT</parley-files-sftp.version>
     <parley-files-jdbc.version>1.0.0-SNAPSHOT</parley-files-jdbc.version>
+    <parley-files-swing.version>1.0.0-SNAPSHOT</parley-files-swing.version>
   </properties>
 
   <dependencyManagement>
@@ -133,6 +134,11 @@
         <groupId>us.bringardner.parley</groupId>
         <artifactId>parley-files-jdbc</artifactId>
         <version>${parley-files-jdbc.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-files-swing</artifactId>
+        <version>${parley-files-swing.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
