@@ -22,7 +22,7 @@
     </dependency>
 
   Each BOM release is a tested-together set. Release a new BOM whenever any module
-  version below changes. Lists ONLY Parley's own artifacts - never third-party ones.
+  version below changes. Lists ONLY the author's own artifacts (Parley modules and the widget libraries) - never third-party ones.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -61,6 +61,11 @@
     <parley-files-sftp.version>1.0.0-SNAPSHOT</parley-files-sftp.version>
     <parley-files-jdbc.version>1.0.0-SNAPSHOT</parley-files-jdbc.version>
     <parley-files-swing.version>1.0.0-SNAPSHOT</parley-files-swing.version>
+    <parley-files-fx.version>1.0.0-SNAPSHOT</parley-files-fx.version>
+    <parley-files-viewer.version>1.0.0-SNAPSHOT</parley-files-viewer.version>
+    <!-- Widget libraries, published under us.bringardner (not us.bringardner.parley) -->
+    <bringardner-swing-widgets.version>1.0.0-SNAPSHOT</bringardner-swing-widgets.version>
+    <bringardner-fx-widgets.version>1.0.0-SNAPSHOT</bringardner-fx-widgets.version>
   </properties>
 
   <dependencyManagement>
@@ -139,6 +144,26 @@
         <groupId>us.bringardner.parley</groupId>
         <artifactId>parley-files-swing</artifactId>
         <version>${parley-files-swing.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-files-fx</artifactId>
+        <version>${parley-files-fx.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner.parley</groupId>
+        <artifactId>parley-files-viewer</artifactId>
+        <version>${parley-files-viewer.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner</groupId>
+        <artifactId>bringardner-swing-widgets</artifactId>
+        <version>${bringardner-swing-widgets.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>us.bringardner</groupId>
+        <artifactId>bringardner-fx-widgets</artifactId>
+        <version>${bringardner-fx-widgets.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
